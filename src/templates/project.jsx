@@ -23,7 +23,7 @@ const ProjectHeroContainer = styled("div")`
     }
 `
 
-const ProjectTitle = styled("div") `
+const ProjectTitle = styled("div")`
     max-width: 550px;
     margin: 0 auto;
     text-align: center;
@@ -54,7 +54,7 @@ const Project = ({ project, meta }) => {
     return (
         <>
             <Helmet
-                title={`${project.project_title[0].text} | Prist, Gatsby & Prismic Starter`}
+                title={`${project.project_title[0].text} | Soul Ruckus Labs`}
                 titleTemplate={`%s | ${meta.title}`}
                 meta={[
                     {
@@ -63,7 +63,7 @@ const Project = ({ project, meta }) => {
                     },
                     {
                         property: `og:title`,
-                        content: `${project.project_title[0].text} | Prist, Gatsby & Prismic Starter`,
+                        content: `${project.project_title[0].text} | Soul Ruckus Labs`,
                     },
                     {
                         property: `og:description`,
@@ -117,7 +117,7 @@ export default ({ data }) => {
     const projectContent = data.prismic.allProjects.edges[0].node;
     const meta = data.site.siteMetadata;
     return (
-        <Project project={projectContent} meta={meta}/>
+        <Project project={projectContent} meta={meta} />
     )
 }
 
