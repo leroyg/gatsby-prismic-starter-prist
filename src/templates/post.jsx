@@ -96,7 +96,7 @@ const Post = ({ post, meta }) => {
     return (
         <>
             <Helmet
-                title={`${post.post_title[0].text} | Prist, Gatsby & Prismic Starter`}
+                title={`${post.post_title[0].text} | Soul Ruckus Labs`}
                 titleTemplate={`%s | ${meta.title}`}
                 meta={[
                     {
@@ -105,7 +105,7 @@ const Post = ({ post, meta }) => {
                     },
                     {
                         property: `og:title`,
-                        content: `${post.post_title[0].text} | Prist, Gatsby & Prismic Starter`,
+                        content: `${post.post_title[0].text} | Soul Ruckus Labs`,
                     },
                     {
                         property: `og:description`,
@@ -148,7 +148,7 @@ const Post = ({ post, meta }) => {
                         <Moment format="MMMM D, YYYY">{post.post_date}</Moment>
                     </PostDate>
                 </PostMetas>
-                    {post.post_hero_image && (
+                {post.post_hero_image && (
                     <PostHeroContainer>
                         <img src={post.post_hero_image.url} alt="bees" />
                         <PostHeroAnnotation>
@@ -168,7 +168,7 @@ export default ({ data }) => {
     const postContent = data.prismic.allPosts.edges[0].node;
     const meta = data.site.siteMetadata;
     return (
-        <Post post={postContent} meta={meta}/>
+        <Post post={postContent} meta={meta} />
     )
 }
 
